@@ -146,7 +146,8 @@ function renderForecast(card, data) {
  * @return {Object} The weather forecast, if the request fails, return null.
  */
 function getForecastFromNetwork(coords) {
-  return fetch(`/forecast/${coords}`)
+//process.env.SECRET_NAME = '1519facff3e479170372602d0712c329'
+  return fetch(`/forecast/1519facff3e479170372602d0712c329${coords}`)
       .then((response) => {
         return response.json();
       })
