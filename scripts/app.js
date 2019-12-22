@@ -16,6 +16,9 @@
  * limitations under the License
  */
 'use strict';
+//const API_KEY = process.env.DARKSKY_API_KEY;1519facff3e479170372602d0712c329
+const API_KEY = `1519facff3e479170372602d0712c329`;
+const BASE_URL = `https://api.darksky.net/forecast`;
 
 const weatherApp = {
   selectedLocations: {},
@@ -146,8 +149,9 @@ function renderForecast(card, data) {
  * @return {Object} The weather forecast, if the request fails, return null.
  */
 function getForecastFromNetwork(coords) {
-//process.env.SECRET_NAME = '1519facff3e479170372602d0712c329'
-  return fetch(`/forecast/1519facff3e479170372602d0712c329${coords}`)
+    const url = `${BASE_URL}/${API_KEY}/${coords}`;
+  //return fetch(`/forecast/${API_KEY}/${coords}`)
+  return fetch(url)
       .then((response) => {
         return response.json();
       })
@@ -167,7 +171,8 @@ function getForecastFromCache(coords) {
 if (!('caches' in window)) {
   return null;
 }
-const url = `${window.location.origin}/forecast/1519facff3e479170372602d0712c329${coords}`;
+const url = `${window.location.origin}/forecast/${API_KEY}/${coords}`;
+//const url = `${BASE_URL}/${API_KEY}/${coords}`;
 return caches.match(url)
     .then((response) => {
       if (response) {
