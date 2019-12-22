@@ -151,7 +151,7 @@ function renderForecast(card, data) {
 function getForecastFromNetwork(coords) {
     const url = `${BASE_URL}/${API_KEY}/${coords}`;
   //return fetch(`/forecast/${API_KEY}/${coords}`)
-  return fetch(url)
+  return fetch(url, { mode: 'no-cors' })
       .then((response) => {
         return response.json();
       })
