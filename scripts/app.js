@@ -167,7 +167,7 @@ function getForecastFromCache(coords) {
 if (!('caches' in window)) {
   return null;
 }
-const url = `${window.location.origin}/forecast/${coords}`;
+const url = `${window.location.origin}/forecast/1519facff3e479170372602d0712c329${coords}`;
 return caches.match(url)
     .then((response) => {
       if (response) {
