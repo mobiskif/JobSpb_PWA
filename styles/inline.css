@@ -7,8 +7,8 @@ body {
     overflow:auto;
 }
 
-table {
-    border: 0px solid;
+aside {
+    border: 1px solid;
     float:left;
 }
 		td {
