@@ -7,8 +7,8 @@ body {
     overflow:auto;
 }
 
-aside {
-    border: 1px solid;
+table {
+    border: 0px solid;
     float:left;
 }
 		td {
@@ -22,7 +22,7 @@ aside {
     overflow:auto;
     min-width:410px;
     height:98%;
-    width:92%;
+    width:80%;
 }
 
 .main {
@@ -55,6 +55,9 @@ aside {
 }
 
 @media all and (max-width: 825px) {
+table {
+    float:none;
+}
  		tr {
   			display: inline;
   		}
