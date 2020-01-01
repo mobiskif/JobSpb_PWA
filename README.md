@@ -7,7 +7,6 @@ Content in the first column | qweqwe
 hh | <a href="https://mobiskif.github.io/hh_JAVA/" target="t1">hh_JAVA</a><br>
 VKonverte | <a href="https://mobiskif.github.io/VKonverte_PHP/" target="t1">VKonverte_PHP</a><br>
 Healthy | <a href="https://mobiskif.github.io/Healthy_ANDROID/" target="t1">Healthy_ANDROID</a>
+------------ | -------------
 
-
-------------------------------------
-<p><iframe src="https://mobiskif.github.io/hh_JAVA/" width="320" height="240" frameborder="0"></iframe></p>
+<p><iframe src="https://mobiskif.github.io/hh_JAVA/" width="100%" height="50%" frameborder="0"></iframe></p>
