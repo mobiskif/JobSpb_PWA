@@ -1,13 +1,10 @@
 # Избранное
 
-Проект | Ссылка | Скриншот
------------- | ------------- | -------------
-hh_Java |[link](https://mobiskif.github.io/hh_JAVA/) | ![Image](https://raw.githubusercontent.com/mobiskif/hh_JAVA/master/res/hh.png) 
-VKonverte | <a href="https://mobiskif.github.io/VKonverte_PHP/" target="t1">VKonverte_PHP</a> | qww
-Healthy | <a href="https://mobiskif.github.io/Healthy_ANDROID/" target="t1">Healthy_ANDROID</a> | shdh
+Ссылка | Скриншот
+------------ | -------------
+[hh_Java](https://mobiskif.github.io/hh_JAVA/) | ![Image](https://raw.githubusercontent.com/mobiskif/hh_JAVA/master/res/hh.png) 
+[VKonverte](https://mobiskif.github.io/VKonverte_PHP/) | qww
+[Healthy](https://mobiskif.github.io/Healthy_ANDROID/) | shdh
 ------------ | ------------- | -------------
 
 <p><iframe src="https://mobiskif.github.io/hh_JAVA/" width="100%" height="50%" frameborder="0"></iframe></p>
-If you want to embed images, this is how you do it:
-
-![Image of Yaktocat](https://raw.githubusercontent.com/mobiskif/hh_JAVA/master/res/hh.png)
