@@ -1,9 +1,4 @@
 # Избранное
-
-<p>
-</p>
-<iframe src="https://mobiskif.github.io/hh_JAVA/" width="100%" height="33%" frameborder="0" />
-
 First Header | Second Header
 ------------ | -------------
 Content from cell 1 | Content from cell 2
