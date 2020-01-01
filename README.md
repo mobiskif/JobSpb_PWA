@@ -2,10 +2,8 @@
 
 First Header | Second Header
 ------------ | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | qweqwe
-hh | <a href="https://mobiskif.github.io/hh_JAVA/" target="t1">hh_JAVA</a><br>
-VKonverte | <a href="https://mobiskif.github.io/VKonverte_PHP/" target="t1">VKonverte_PHP</a><br>
+hh | <a href="https://mobiskif.github.io/hh_JAVA/" target="t1">hh_JAVA</a>
+VKonverte | <a href="https://mobiskif.github.io/VKonverte_PHP/" target="t1">VKonverte_PHP</a>
 Healthy | <a href="https://mobiskif.github.io/Healthy_ANDROID/" target="t1">Healthy_ANDROID</a>
 ------------ | -------------
 
