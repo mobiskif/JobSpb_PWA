@@ -10,4 +10,4 @@ Healthy | <a href="https://mobiskif.github.io/Healthy_ANDROID/" target="t1">Heal
 <p><iframe src="https://mobiskif.github.io/hh_JAVA/" width="100%" height="50%" frameborder="0"></iframe></p>
 If you want to embed images, this is how you do it:
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Yaktocat](https://raw.githubusercontent.com/mobiskif/hh_JAVA/master/res/hh.png)
