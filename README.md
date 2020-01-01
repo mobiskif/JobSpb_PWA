@@ -5,4 +5,4 @@
         <a href="https://mobiskif.github.io/VKonverte_PHP/" target="t1">VKonverte_PHP</a><br>
         <a href="https://mobiskif.github.io/Healthy_ANDROID/" target="t1">Healthy_ANDROID</a>
 </p>
-<iframe src="https://mobiskif.github.io/hh_JAVA/" width="100%" height="25%" frameborder="0" />
+<iframe src="https://mobiskif.github.io/hh_JAVA/" width="100%" height="33%" frameborder="0" />
