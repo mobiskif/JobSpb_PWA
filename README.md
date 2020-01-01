@@ -1,8 +1,8 @@
 # Избранное
 
-Проект | Скриншот | yuu
+Проект | Ссылка | Скриншот
 ------------ | ------------- | -------------
-hh_Java |[link to Google!](https://mobiskif.github.io/hh_JAVA/) | ![Image](https://raw.githubusercontent.com/mobiskif/hh_JAVA/master/res/hh.png) 
+hh_Java |[link](https://mobiskif.github.io/hh_JAVA/) | ![Image](https://raw.githubusercontent.com/mobiskif/hh_JAVA/master/res/hh.png) 
 VKonverte | <a href="https://mobiskif.github.io/VKonverte_PHP/" target="t1">VKonverte_PHP</a> | qww
 Healthy | <a href="https://mobiskif.github.io/Healthy_ANDROID/" target="t1">Healthy_ANDROID</a> | shdh
 ------------ | ------------- | -------------
