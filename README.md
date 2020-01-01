@@ -1,5 +1,5 @@
 # Избранное
-:herb:
+
 Проект | Скриншот
 ------------ | -------------
 [hh_Java](https://mobiskif.github.io/hh_JAVA/) | ![Image](https://raw.githubusercontent.com/mobiskif/hh_JAVA/master/res/hh.png) 
