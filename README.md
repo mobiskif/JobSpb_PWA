@@ -16,3 +16,16 @@
   <param name="mayscript" value="true" />
   <param name="plugindetect" value="1" />
 </object>
+
+<applet codebase="" code="LennardJones.jar" height="300" width="500"></applet>
+
+<script>
+    var attributes = {codebase: 'http://my.url/my/path/to/codebase',
+                      code: 'main.class',
+                      archive: 'LennardJone.jar',
+                      width: '500', 
+                      height: '300'};
+    var parameters = {java_arguments: '-Xmx256m'}; // customize per your needs
+    var version = '1.5'; // JDK version
+    deployJava.runApplet(attributes, parameters, version);
+</script>
