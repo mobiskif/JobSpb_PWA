@@ -20,9 +20,9 @@
 <applet codebase="" code="LennardJones.jar" height="300" width="500"></applet>
 
 <script>
-    var attributes = {codebase: 'http://my.url/my/path/to/codebase',
-                      code: 'main.class',
-                      archive: 'LennardJone.jar',
+    var attributes = {codebase: 'https://raw.githubusercontent.com/mobiskif/LennardJones/new_locator/src/LennardJohnes.jar',
+                      code: 'Main.class',
+                      archive: 'LennardJones.jar',
                       width: '500', 
                       height: '300'};
     var parameters = {java_arguments: '-Xmx256m'}; // customize per your needs
