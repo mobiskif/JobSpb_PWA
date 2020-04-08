@@ -17,10 +17,10 @@
   <param name="plugindetect" value="1" />
 </object>
 
-<applet codebase="" code="LennardJones.jar" height="300" width="500"></applet>
+<applet codebase="https://raw.githubusercontent.com/mobiskif/LennardJones/new_locator/src/LennardJones.jar" code="Main.class" height="300" width="500"></applet>
 
 <script>
-    var attributes = {codebase: 'https://raw.githubusercontent.com/mobiskif/LennardJones/new_locator/src/LennardJohnes.jar',
+    var attributes = {codebase: 'https://raw.githubusercontent.com/mobiskif/LennardJones/new_locator/src/LennardJones.jar',
                       code: 'Main.class',
                       archive: 'LennardJones.jar',
                       width: '500', 
