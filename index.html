@@ -161,12 +161,33 @@ function initializeUI() {
   });
 }
 
+function urlB64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding)
+    .replace(/\-/g, '+')
+    .replace(/_/g, '/');
+
+  const rawData = window.atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
+
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
+  }
+  return outputArray;
+}
+
+//Public Key
+const applicationServerPublicKey = "BLaTN0-2v-h_Q-Mb1kVTr1WJuXRgSczHSgGnRi3fkoA1ZL8MOKErxD0zBaOF3XY-YbsWTbHtKIpnmYCCLrgiW4k";
+//Private Key
+//Jijo9YoEHdar0vU7pr7YptUzJmRR9GvXTX8PC3dUFOA
+
+
 function subscribeUser() {
-  const applicationServerKey = "key-key-key";
-  swRegistration.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey: applicationServerKey
-  })
+const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
+swRegistration.pushManager.subscribe({
+  userVisibleOnly: true,
+  applicationServerKey: applicationServerKey
+})
   .then(function(subscription) {
     console.log('User is subscribed.');
 
