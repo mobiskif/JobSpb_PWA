@@ -137,12 +137,14 @@ var swRegistration;
                 .then(reg => {
                   swRegistration=reg;
                   console.log('Service worker registered! ', reg);
+                  initializeUI();
                 })
                 .catch(err => {
                   console.log('Service worker registration failed: ', err);
                 });
       });
     }
+
 function initializeUI() {
   // Set the initial subscription value
   swRegistration.pushManager.getSubscription()
@@ -154,11 +156,9 @@ function initializeUI() {
     } else {
       console.log('User is NOT subscribed.');
     }
-
-    updateBtn();
+    //updateBtn();
   });
 }
-
 
 </script>
 <script>
