@@ -155,7 +155,29 @@ function initializeUI() {
       console.log('User IS subscribed.');
     } else {
       console.log('User is NOT subscribed.');
+      subscribeUser();
     }
+    //updateBtn();
+  });
+}
+
+function subscribeUser() {
+  const applicationServerKey = "key-key-key";
+  swRegistration.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: applicationServerKey
+  })
+  .then(function(subscription) {
+    console.log('User is subscribed.');
+
+    updateSubscriptionOnServer(subscription);
+
+    isSubscribed = true;
+
+    //updateBtn();
+  })
+  .catch(function(err) {
+    console.log('Failed to subscribe the user: ', err);
     //updateBtn();
   });
 }
