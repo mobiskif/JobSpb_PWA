@@ -1,3 +1,5 @@
+importScripts('pwabuilder-sw.js');
+
 const cacheName = 'cache-v4';
 const precacheResources = [
     '/',
