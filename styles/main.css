@@ -1,4 +1,4 @@
-form {
+#form {
 	border: 0px solid;
 	padding: .5em;
 	text-align: right;
@@ -8,11 +8,26 @@ form {
 	z-index: 100;
 }
 #map {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
 	position: absolute;
 	left: 0;
 	top: 0;
 	z-index: 0;
 }
+
+   html, body {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    #work, #salary, #button {
+      padding: .25em;
+      padding-left: .5em;
+    }
 
 /*
 Copyright 2018 Google Inc.
