@@ -21,6 +21,7 @@
 
 'use strict';
 
+/*
 const applicationServerPublicKey = 'BKIOwhp3sXvEj3C7HpkGq2g6gmQdplbarc6kWbtjZY9e9TwysC_vyp1qF8sUxOkdY8rNMOwXYpgaRvPDXq-f8yQ';
 const privKey = '840SMKoYvAZuvauTuRiXIMUuuNLjvS9uu0TQ_9ksdGw';
 
@@ -150,15 +151,17 @@ function initializeUI() {
       document.querySelector('#installBanner').style.display = 'flex';
     });
 
+*/
 if ('serviceWorker' in navigator && 'PushManager' in window) {
   console.log('Service Worker and Push is supported');
 
-  navigator.serviceWorker.register('service-worker.js')
+  //navigator.serviceWorker.register('service-worker.js')
+  navigator.serviceWorker.register('sw.js')
   .then(function(swReg) {
     console.log('Service Worker is registered', swReg);
 
     swRegistration = swReg;
-    initializeUI();
+    //initializeUI();
   })
   .catch(function(error) {
     console.error('Service Worker Error', error);
