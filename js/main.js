@@ -7,7 +7,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
   .then(function(swReg) {
     console.log('Service Worker is registered', swReg);
 
-    swRegistration = swReg;
+    //swRegistration = swReg;
     //initializeUI();
   })
   .catch(function(error) {
