@@ -35,7 +35,7 @@ function init() {
         do_query(query, salary);
     });
 
-    //do_query("Токарь", "60000");
+    do_query("Токарь", "60000");
 }
 
 function addballons(data) {
