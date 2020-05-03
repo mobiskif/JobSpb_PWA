@@ -29,9 +29,8 @@ function init() {
     var btn = document.querySelector('button[id="button"]');
     btn.addEventListener('click', function (event) {
         //var txt = document.querySelector('input[id="suggest"]');
-        var query = document.getElementById("suggest").value;
+        var query = document.getElementById("work").value;
         var salary = document.getElementById("salary").value;
-        //query = txt.getAttribute("text");
         do_query(query, salary);
     });
 
