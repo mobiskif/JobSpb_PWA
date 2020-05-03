@@ -1,6 +1,6 @@
 {
-  "name": "Работа СПб",
-  "short_name": "Работа СПб",
+  "name": "WorkSPb",
+  "short_name": "WorkSPb",
   "lang": "ru-RU",
   "start_url": "index.html",
   "display": "standalone",
