@@ -21,10 +21,11 @@
 
 'use strict';
 
-const applicationServerPublicKey = 'BOkPqY9sCTgAV37xQ-MfcVc0mp6ZJ593fPQ6pcIS_B97FVUJHJg-FcMF3-73Cgt5AZINSZldGzIzFaM-a5xLFuA';
+const applicationServerPublicKey = 'BKIOwhp3sXvEj3C7HpkGq2g6gmQdplbarc6kWbtjZY9e9TwysC_vyp1qF8sUxOkdY8rNMOwXYpgaRvPDXq-f8yQ';
+const privKey = '840SMKoYvAZuvauTuRiXIMUuuNLjvS9uu0TQ_9ksdGw';
 
-//const pushButton = document.querySelector('.js-push-btn');
-var pushButton = document.getElementById('pushButton');
+const pushButton = document.querySelector('.js-push-btn');
+//var pushButton = document.getElementById('pushButton');
 
 let isSubscribed = false;
 let swRegistration = null;
@@ -123,6 +124,31 @@ function initializeUI() {
     updateBtn();
   });
 }
+
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', event => {
+      // Prevent Chrome 67 and earlier from automatically showing the prompt
+      event.preventDefault();
+      // Stash the event so it can be triggered later.
+      deferredPrompt = event;
+      // Attach the install prompt to a user gesture
+      document.querySelector('#installBtn').addEventListener('click', event => {
+        // Show the prompt
+        deferredPrompt.prompt();
+        // Wait for the user to respond to the prompt
+        deferredPrompt.userChoice
+                .then((choiceResult) => {
+                  if (choiceResult.outcome === 'accepted') {
+                    console.log('User accepted the A2HS prompt');
+                  } else {
+                    console.log('User dismissed the A2HS prompt');
+                  }
+                  deferredPrompt = null;
+                });
+      });
+      // Update UI notify the user they can add to home screen
+      document.querySelector('#installBanner').style.display = 'flex';
+    });
 
 if ('serviceWorker' in navigator && 'PushManager' in window) {
   console.log('Service Worker and Push is supported');
