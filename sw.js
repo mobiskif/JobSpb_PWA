@@ -2,17 +2,16 @@
 const CACHE_NAME = 'cache-v6';
 const FILES_TO_CACHE = [
     '/',
-    './',
-    'index.html',
-    'offline.html',
-    'styles/main.css',
-    'images/icon.png',
-    'images/badge.png',
-    'images/touch/icon-128x128.png',
-    'images/touch/icon-192x192.png',
-    'images/touch/icon-256x256.png',
-    'images/touch/icon-384x384.png',
-    'images/touch/icon-512x512.png'
+    '/index.html',
+    '/offline.html',
+    '/styles/main.css',
+    '/images/icon.png',
+    '/images/badge.png',
+    '/images/touch/icon-128x128.png',
+    '/images/touch/icon-192x192.png',
+    '/images/touch/icon-256x256.png',
+    '/images/touch/icon-384x384.png',
+    '/images/touch/icon-512x512.png'
 ];
 
 self.addEventListener('install', event => {
