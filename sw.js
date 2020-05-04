@@ -1,6 +1,6 @@
 'use strict';
-const cacheName = 'cache-v5';
-const precacheResources = [
+const CACHE_NAME = 'cache-v5';
+const FILES_TO_CACHE = [
     '/',
     'index.html',
     'offline.html',
@@ -17,19 +17,43 @@ const precacheResources = [
 self.addEventListener('install', event => {
     console.log('Service worker install event!');
     event.waitUntil(
-        caches.open(cacheName)
+        caches.open(CACHE_NAME)
             .then(cache => {
-                return cache.addAll(precacheResources);
+                console.log('[ServiceWorker] Pre-caching offline page');
+                return cache.addAll(FILES_TO_CACHE);
             })
     );
 });
 
 self.addEventListener('activate', event => {
     console.log('Service worker activate event!');
+    evt.waitUntil(
+        caches.keys().then((keyList) => {
+          return Promise.all(keyList.map((key) => {
+            if (key !== CACHE_NAME) {
+              console.log('[ServiceWorker] Removing old cache', key);
+              return caches.delete(key);
+            }
+          }));
+        })
+    );
 });
 
 self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request));
+    if (evt.request.mode !== 'navigate') {
+      // Not a page navigation, bail.
+      return;
+    }
+    evt.respondWith(
+        fetch(evt.request)
+            .catch(() => {
+              return caches.open(CACHE_NAME)
+                  .then((cache) => {
+                    return cache.match('offline.html');
+                  });
+            })
+    );
+    //event.respondWith(caches.match(event.request));
 });
 
 /*
