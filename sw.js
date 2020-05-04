@@ -26,7 +26,7 @@ self.addEventListener('install', event => {
 
 self.addEventListener('activate', event => {
     console.log('Service worker activate event!');
-    evt.waitUntil(
+    event.waitUntil(
         caches.keys().then((keyList) => {
           return Promise.all(keyList.map((key) => {
             if (key !== CACHE_NAME) {
@@ -40,12 +40,12 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', function(event) {
      console.log('Service worker fetch event!');
-   if (evt.request.mode !== 'navigate') {
+   if (event.request.mode !== 'navigate') {
       // Not a page navigation, bail.
       return;
     }
-    evt.respondWith(
-        fetch(evt.request)
+    event.respondWith(
+        fetch(event.request)
             .catch(() => {
               return caches.open(CACHE_NAME)
                   .then((cache) => {

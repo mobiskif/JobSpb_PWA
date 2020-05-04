@@ -40,7 +40,7 @@ function init() {
 function addballons(data) {
     $.each(data.items, function (key, val) {
         if (val.address != null) {
-            console.log(val.address.lat + "," + val.address.lng);
+            //console.log(val.address.lat + "," + val.address.lng);
             var sal;
             if (val.salary.from != null) sal = val.salary.from;
             else if (val.salary.to != null) sal = val.salary.to;
@@ -79,18 +79,18 @@ function addballons(data) {
 }
 
 function addpage(i, q, s) {
-    console.log(i);
+    //console.log(i);
     $.getJSON("https://api.hh.ru/vacancies?area=2&only_with_salary=true&salary=" + s + "&page=" + i + "&text=" + q, function (data) {
         addballons(data);
     });
 }
 
 function do_query(q, s) {
-    console.log(q);
+    //console.log(q);
     myMap.geoObjects.removeAll();
     $.getJSON("https://api.hh.ru/vacancies?area=2&only_with_salary=true&salary=" + s + "&page=0&text=" + q, function (data) {
         var pags = data.pages;
-        console.log(pags);
+        console.log("Страниц: "+pags);
         addballons(data);
         for (let i = 1; i < pags; i++) addpage(i, q, s);
     });
