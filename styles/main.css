@@ -22,9 +22,24 @@
       height: 100%;
       padding: 0;
       margin: 0;
+border: 0px solid;
+overflow: auto;
+display:table;
     }
     #work, #salary, #button {
       padding: .25em;
       padding-left: .5em;
       margin-right: .5em;
     }
+
+.wwrapper {
+  display: table;
+  width: 100%;
+border: 2px solid red;
+height: 100%;
+}
+.box {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
