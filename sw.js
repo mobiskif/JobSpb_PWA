@@ -1,6 +1,8 @@
 'use strict';
 const CACHE_NAME = 'cache-v6';
 const FILES_TO_CACHE = [
+    '/',
+    './',
     'index.html',
     'offline.html',
     'styles/main.css',
