@@ -52,7 +52,7 @@ function addballons(data) {
                     balloonContent: '<b>' + val.employer.name + '</b><br/>'
                         + '<a href="' + val.alternate_url + '" target="_blank">' + val.name + '</a><br/>'
                         + val.salary.from + '..' + val.salary.to
-                        + '</br><a href="https://meet.google.com/hga-tzxn-fgq" target="_blank">HR отдел онлайн</a>'
+                        + '</br><a href="https://meet.google.com/hga-tzxn-fgq" target="_blank">HR online</a>'
                         //+ '<br/>' + val.code
                 },
                 {
