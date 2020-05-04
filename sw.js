@@ -1,7 +1,6 @@
 'use strict';
-const CACHE_NAME = 'cache-v5';
+const CACHE_NAME = 'cache-v6';
 const FILES_TO_CACHE = [
-    '/',
     'index.html',
     'offline.html',
     'styles/main.css',
@@ -40,7 +39,8 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', function(event) {
-    if (evt.request.mode !== 'navigate') {
+     console.log('Service worker fetch event!');
+   if (evt.request.mode !== 'navigate') {
       // Not a page navigation, bail.
       return;
     }
@@ -49,6 +49,7 @@ self.addEventListener('fetch', function(event) {
             .catch(() => {
               return caches.open(CACHE_NAME)
                   .then((cache) => {
+                    console.log('Service worker return offline.html');
                     return cache.match('offline.html');
                   });
             })
