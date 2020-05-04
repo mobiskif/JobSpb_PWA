@@ -1,19 +1,10 @@
 'use strict';
-if ('serviceWorker' in navigator && 'PushManager' in window) {
-  console.log('Service Worker and Push is supported');
-
-  //navigator.serviceWorker.register('service-worker.js')
-  navigator.serviceWorker.register('sw.js')
-  .then(function(swReg) {
-    console.log('Service Worker is registered', swReg);
-
-    //swRegistration = swReg;
-    //initializeUI();
-  })
-  .catch(function(error) {
-    console.error('Service Worker Error', error);
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
   });
-} else {
-  console.warn('Push messaging is not supported');
-  pushButton.textContent = 'Push Not Supported';
 }

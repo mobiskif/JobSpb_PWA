@@ -1,5 +1,5 @@
 'use strict';
-const cacheName = 'cache-v4';
+const cacheName = 'cache-v5';
 const precacheResources = [
     '/',
     'index.html',
@@ -28,6 +28,11 @@ self.addEventListener('activate', event => {
     console.log('Service worker activate event!');
 });
 
+self.addEventListener('fetch', function(event) {
+  event.respondWith(caches.match(event.request));
+});
+
+/*
 self.addEventListener('fetch', event => {
     console.log('Fetch intercepted for:', event.request.url);
     event.respondWith(caches.match(event.request)
@@ -39,3 +44,4 @@ self.addEventListener('fetch', event => {
         })
     );
 });
+*/
