@@ -1,4 +1,4 @@
-# mobiskif.github.io
+# JobSPb_PWA
 <img src="2.png" />
 <p>PWA valid application, worker, installable</p>
 <p>published on GooglePlay <a href="https://play.google.com/store/apps/details?id=com.workspb.twa">WorkSPb</a></p>
